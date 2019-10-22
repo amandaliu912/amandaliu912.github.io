@@ -108,10 +108,9 @@ analytics:
 # Site Author
 author:
   name             : "Amanda Liu"
-  avatar           : "/docs/assets/images/amanda.jpg"
+  avatar           : "/docs/assets/images/amanda.png"
   bio              : "Business Analyst // Data Analyst"
   location         : "Greater New York Area"
-  email            : "amandaliu912@gmail.com"
   links:
     - label: "Email"
       icon: "fas fa-fw fa-envelope-square"
