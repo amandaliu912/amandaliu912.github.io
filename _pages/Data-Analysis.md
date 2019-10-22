@@ -1,7 +1,7 @@
 ---
 layout: archive
 permalink: /Data-Analysis/
-title: "Chicago crime analysis"
+title: "Data analysis"
 author_profile: true
 header:
   image: "images/crime.jpg"
