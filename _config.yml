@@ -2,23 +2,23 @@
 source: .tmp/src
 destination: .tmp/dist
 
-title: "Made Mistakes"
-description: "Personal website of designer Michael Rose (@mmistakes)"
+title: "Amanda Liu"
+description: "My Data Science Portfolio"
 logo: &logo "/assets/images/android-chrome-384x384.png"
 locale: "en_US"
 words_per_minute: 200
 
-repository: "mmistakes/made-mistakes-jekyll"
-url: "https://mademistakes.com"
+repository: "amandaliu912.github.io"
+url: "amandaliu912.github.io"
 
 social:
-  name: "Michael Rose"
+  name: "Amanda Liu"
   links:
-    - "https://twitter.com/mmistakes"
-    - "https://www.facebook.com/michaelrose"
-    - "https://www.instagram.com/mmistakes/"
-    - "https://github.com/mmistakes"
-    - "https://micro.blog/mmistakes"
+    - ""
+    - ""
+    - ""
+    - "https://github.com/amandaliu912"
+    - ""
 
 google_site_verification: "geapSKtvpBNDSfXVmF09E9CnaHGglbO61r4XgLZtEmo"
 bing_site_verification: "D81F4C18A6CB3018F64D7C827D953DFD"
@@ -43,18 +43,18 @@ microblog_url: "https://micro.blog/mmistakes"
 
 # Site owner
 author:
-  name: "Michael Rose"
+  name: "Amanda Liu"
   uri: &uri "https://mademistakes.com/about/"
   url: *uri
   bio: "Just another boring, tattooed, time traveling designer."
   picture: "/assets/images/michael-rose-glitched.jpg"
-  twitter: "https://twitter.com/mmistakes"
-  facebook: "https://www.facebook.com/michaelrose"
-  instagram: "https://www.instagram.com/mmistakes/"
-  github: "https://github.com/mmistakes"
+  twitter: ""
+  facebook: ""
+  instagram: ""
+  github: ""
 
 twitter:
-  username: "mmistakes"
+  username: ""
 
 # Staticman comments (full configuration in staticman.yml)
 staticman:
