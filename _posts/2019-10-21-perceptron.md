@@ -5,6 +5,7 @@ tags: [exploratory analysis, data science, crime, python]
 header:
   image: "images/crime.jpg"
 excerpt: "Data science, crime analysis"
+mathjax: "true"
 ---
 
 
