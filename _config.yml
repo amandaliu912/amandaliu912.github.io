@@ -108,7 +108,7 @@ analytics:
 # Site Author
 author:
   name             : "Amanda Liu"
-  avatar           : "/docs/assets/images/amanda.png"
+  avatar           : "/assets/amanda.png"
   bio              : "Business Analyst // Data Analyst"
   location         : "Greater New York Area"
   links:
