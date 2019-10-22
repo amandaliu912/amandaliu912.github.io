@@ -108,17 +108,17 @@ analytics:
 # Site Author
 author:
   name             : "Amanda Liu"
-  avatar           : "/assets/images/amanda.jpg"
+  avatar           : "/docs/assets/images/amanda.jpg"
   bio              : "Business Analyst // Data Analyst"
   location         : "Greater New York Area"
-  email            :
+  email            : "amandaliu912@gmail.com"
   links:
     - label: "Email"
       icon: "fas fa-fw fa-envelope-square"
-      # url: mailto:your.name@email.com
+      url: mailto:amandaliu912@email.com
     - label: "Website"
       icon: "fas fa-fw fa-link"
-      # url: "https://your-website.com"
+      url: "amandaliu912.github.io"
     - label: "Twitter"
       icon: "fab fa-fw fa-twitter-square"
       # url: "https://twitter.com/"
@@ -127,7 +127,7 @@ author:
       # url: "https://facebook.com/"
     - label: "GitHub"
       icon: "fab fa-fw fa-github"
-      # url: "https://github.com/"
+      url: "https://github.com/amandaliu912/"
     - label: "Instagram"
       icon: "fab fa-fw fa-instagram"
       # url: "https://instagram.com/"
