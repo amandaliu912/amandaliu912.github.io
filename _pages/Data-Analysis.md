@@ -1,6 +1,6 @@
 ---
 layout: archive
-permalink: /Chicago-crime-analysis/
+permalink: /Data-Analysis/
 title: "Chicago crime analysis"
 author_profile: true
 header:
