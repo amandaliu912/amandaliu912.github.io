@@ -1,415 +1,204 @@
-# [Made Mistakes](https://mademistakes.com) Source Code
+# [Minimal Mistakes Jekyll theme](https://mmistakes.github.io/minimal-mistakes/)
 
-This is the source code of Made Mistakes, a personal blog and portfolio built 
-with [Jekyll](http://jekyllrb.com) [Gulp](http://gulpjs.com/), and 
-[Netlify](https://www.netlify.com/).
+[![LICENSE](https://img.shields.io/badge/license-MIT-lightgrey.svg)](https://raw.githubusercontent.com/mmistakes/minimal-mistakes/master/LICENSE)
+[![Jekyll](https://img.shields.io/badge/jekyll-%3E%3D%203.6-blue.svg)](https://jekyllrb.com/)
+[![Ruby gem](https://img.shields.io/gem/v/minimal-mistakes-jekyll.svg)](https://rubygems.org/gems/minimal-mistakes-jekyll)
+[![Tip Me via PayPal](https://img.shields.io/badge/PayPal-tip%20me-green.svg?logo=paypal)](https://www.paypal.me/mmistakes)
 
-*Please note: Made Mistakes hasn't been "themed" like some of my other 
-[Jekyll repos](https://mademistakes.com/work/jekyll-themes/) and isn't compatible 
-with the "default" GitHub Pages workflow without substantial alterations.*
+Minimal Mistakes is a flexible two-column Jekyll theme, perfect for building personal sites, blogs, and portfolios. As the name implies, styling is purposely minimalistic to be enhanced and customized by you :smile:.
 
-### Plugins used
+:sparkles: See what's new in the [CHANGELOG](CHANGELOG.md).
 
-- [Jekyll Sitemap](https://github.com/jekyll/jekyll-sitemap) (GitHub Pages supported)
-- [Jemoji](https://github.com/jekyll/jemoji)
-- [Jekyll Paginate v2](https://github.com/sverrirs/jekyll-paginate-v2)
-- [Jekyll TOC](https://github.com/toshimaru/jekyll-toc)
+**If you enjoy this theme, please consider [supporting me](https://www.paypal.me/mmistakes) to continue developing and maintaining it.**
 
-### Images
+[![Support via PayPal](https://cdn.rawgit.com/twolfson/paypal-github-button/1.0.0/dist/button.svg)](https://www.paypal.me/mmistakes)
 
-[Made Mistakes](https://mademistakes.com) has a lot of image assets. 
-`src/assets/images/` has been split into its [own repo](https://github.com/mmistakes/made-mistakes-images) and included as a Git submodule.
+**Note:** The theme uses the [jekyll-include-cache](https://github.com/benbalter/jekyll-include-cache) plugin which will need to be installed in your `Gemfile` and added to the `plugins` array of `_config.yml`. Otherwise you'll throw `Unknown tag 'include_cached'` errors at build.
 
-`page.image.feature` should be placed in `src/assets/images/feature`. These 
-`feature` images will be converted into various sizes to be responsively served 
-by browsers that support the [`srcset` attribute](https://responsiveimages.org/).
+[![Minimal Mistakes live preview][2]][1]
 
-### Content helpers
+[1]: https://mmistakes.github.io/minimal-mistakes/
+[2]: screenshot.png (live preview)
 
-#### Notices
+![layout examples](screenshot-layouts.png)
 
-Call-out text. Accepts the following types: `info`, `danger`, `warning`, and `success`. See [style guide](https://mademistakes.com/style-guide/) for visual examples.
+## Notable features
 
-**Default notice example:**
+- Bundled as a "theme gem" for easier installation/upgrading.
+- Compatible with GitHub Pages.
+- Support for Jekyll's built-in Sass/SCSS preprocessor.
+- Nine different skins (color variations).
+- Several responsive layout options (single, archive index, search, splash, and paginated home page).
+- Optimized for search engines with support for [Twitter Cards](https://dev.twitter.com/cards/overview) and [Open Graph](http://ogp.me/) data.
+- Optional [header images](https://mmistakes.github.io/minimal-mistakes/docs/layouts/#headers), [custom sidebars](https://mmistakes.github.io/minimal-mistakes/docs/layouts/#sidebars), [table of contents](https://mmistakes.github.io/minimal-mistakes/docs/helpers/#table-of-contents), [galleries](https://mmistakes.github.io/minimal-mistakes/docs/helpers/#gallery), related posts, [breadcrumb links](https://mmistakes.github.io/minimal-mistakes/docs/configuration/#breadcrumb-navigation-beta), [navigation lists](https://mmistakes.github.io/minimal-mistakes/docs/helpers/#navigation-list), and more.
+- Commenting support (powered by [Disqus](https://disqus.com/), [Facebook](https://developers.facebook.com/docs/plugins/comments), Google+, [Discourse](https://www.discourse.org/), static-based via [Staticman](https://staticman.net/), and [utterances](https://utteranc.es/)).
+- [Google Analytics](https://www.google.com/analytics/) support.
+- UI localized text in English (default), Brazilian Portuguese (Português brasileiro), Catalan, Chinese, Danish, Dutch, French (Français), German (Deutsch), Greek, Hindi (हिंदी), Hungarian, Indonesian, Italian (Italiano), Japanese, Korean, Malayalam, Nepali (Nepalese), Persian (فارسی), Polish, Punjabi (ਪੰਜਾਬੀ), Romanian, Russian, Slovak, Spanish (Español), Swedish, Thai, Turkish (Türkçe), and Vietnamese.
 
-```liquid
-{% notice %}
-Call out some text. **Markdown** is acceptable.
-{% endnotice %}
-```
+## Skins (color variations)
 
-**Danger notice example:**
+This theme comes in nine different skins (including the default one).
 
-```liquid
-{% notice danger %}
-**Danger! Danger!** Use caution.
-{% endnotice %}
-```
+| `air` | `contrast` | `dark` |
+| --- | --- | --- |
+| ![air skin](https://mmistakes.github.io/minimal-mistakes/assets/images/air-skin-archive.png) | ![contrast skin](https://mmistakes.github.io/minimal-mistakes/assets/images/contrast-skin-archive.png) | ![dark skin](https://mmistakes.github.io/minimal-mistakes/assets/images/dark-skin-archive.png) |
 
-#### Figure
+| `dirt` | `mint` | `sunrise` |
+| --- | --- | --- |
+| ![dirt skin](https://mmistakes.github.io/minimal-mistakes/assets/images/dirt-skin-archive.png) | ![mint skin](https://mmistakes.github.io/minimal-mistakes/assets/images/mint-skin-archive.png) | ![sunrise skin](https://mmistakes.github.io/minimal-mistakes/assets/images/sunrise-skin-archive.png) |
 
-Easily generate `figure` elements with optional `caption` and `class` parameters.
+| `aqua` | `neon` | `plum` |
+| --- | --- | --- |
+| ![aqua skin](https://mmistakes.github.io/minimal-mistakes/assets/images/aqua-skin-archive.png) | ![neon skin](https://mmistakes.github.io/minimal-mistakes/assets/images/neon-skin-archive.png) | ![plum skin](https://mmistakes.github.io/minimal-mistakes/assets/images/plum-skin-archive.png) |
 
-**Examples:**
+## Demo pages
 
-In simplest usage:
+| Name                                        | Description                                           |
+| ------------------------------------------- | ----------------------------------------------------- |
+| [Post with Header Image][header-image-post] | A post with a large header image. |
+| [HTML Tags and Formatting Post][html-tags-post] | A variety of common markup showing how the theme styles them. |
+| [Syntax Highlighting Post][syntax-post] | Post displaying highlighted code. |
+| [Post with a Gallery][gallery-post] | A post showing several images wrapped in `<figure>` elements. |
+| [Sample Collection Page][sample-collection] | Single page from a collection. |
+| [Categories Archive][categories-archive] | Posts grouped by category. |
+| [Tags Archive][tags-archive] | Posts grouped by tag. |
 
-```liquid
-{% figure %}
-![Image](/path/to/image.jpg)
-{% endfigure %}
-```
+Additional sample posts are available under [posts archive][year-archive] on the demo site. Source files for these (and the entire demo site) can be found in [`/docs`](docs).
 
-```html
-<figure>
-  <img src="/path/to/image.jpg" alt="Image" />
-</figure>
-```
+[header-image-post]: https://mmistakes.github.io/minimal-mistakes/layout-header-image-text-readability/
+[gallery-post]: https://mmistakes.github.io/minimal-mistakes/post%20formats/post-gallery/
+[html-tags-post]: https://mmistakes.github.io/minimal-mistakes/markup/markup-html-tags-and-formatting/
+[syntax-post]: https://mmistakes.github.io/minimal-mistakes/markup-syntax-highlighting/
+[sample-collection]: https://mmistakes.github.io/minimal-mistakes/recipes/chocolate-chip-cookies/
+[categories-archive]: https://mmistakes.github.io/minimal-mistakes/categories/
+[tags-archive]: https://mmistakes.github.io/minimal-mistakes/tags/
+[year-archive]: https://mmistakes.github.io/minimal-mistakes/year-archive/
 
-If a figure contains an image (or multiple images), the surrounding `<p>` will be stripped:
+## Installation
 
-```liquid
-{% figure %}
-![Image](/path/to/image.jpg)
-{% endfigure %}
-```
+There are three ways to install: as a [gem-based theme](https://jekyllrb.com/docs/themes/#understanding-gem-based-themes), as a [remote theme](https://blog.github.com/2017-11-29-use-any-theme-with-github-pages/) (GitHub Pages compatible), or forking/directly copying all of the theme files into your project.
 
-```html
-<figure>
-  <img src="/path/to/image.jpg" alt="Image" />
-</figure>
-```
+### Gem-based method
 
-You can provide a caption. Any markdown will be rendered:
+With Gem-based themes, directories such as the `assets`, `_layouts`, `_includes`, and `_sass` are stored in the theme’s gem, hidden from your immediate view. Yet all of the necessary directories will be read and processed during Jekyll’s build process.
 
-```liquid
-{% figure caption:"*Markdown* caption" %}
-![Image](/path/to/image.jpg)
-{% endfigure %}
-```
+This allows for easier installation and updating as you don't have to manage any of the theme files. To install:
 
-```html
-<figure>
-  <img src="/path/to/image.jpg" alt="Image" />
-  <figcaption><em>Markdown</em> caption</figcaption>
-</figure>
-```
+1. Add the following to your `Gemfile`:
 
-You can also provide a class name(es) for CSS styling:
+   ```ruby
+   gem "minimal-mistakes-jekyll"
+   ```
 
-```liquid
-{% figure caption:"A caption" class:"classname" %}
-![Image](/path/to/image.jpg)
-{% endfigure %}
-```
+2. Fetch and update bundled gems by running the following [Bundler](http://bundler.io/) command:
 
-```html
-<figure class="classname">
-  <img src="/path/to/image.jpg" alt="Image" />
-  <figcaption>A caption</figcaption>
-</figure>
-```
+   ```bash
+   bundle
+   ```
 
-Finally, the caption parameter will accept liquid output markup:
+3. Set the `theme` in your project's Jekyll `_config.yml` file:
 
-```liquid
-{% figure caption:"{{ page.title }}" %}
-![Image](/path/to/image.jpg)
-{% endfigure %}
-```
+   ```yaml
+   theme: minimal-mistakes-jekyll
+   ```
 
-```html
-<figure>
-  <img src="/path/to/image.jpg" alt="Image" />
-  <figcaption>The title of my post</figcaption>
-</figure>
-```
+To update the theme run `bundle update`.
 
-#### Lazyload
+### Remote theme method
 
-Lazyload images using [**lazysizes**](https://github.com/aFarkas/lazysizes) 
-until they're actually needed for improved page performance.
+Remote themes are similar to Gem-based themes, but do not require `Gemfile` changes or whitelisting making them ideal for sites hosted with GitHub Pages.
 
-| Attribute  | Required     | Description                                                                                                                                             |
-|------------|--------------|---------------------------------------------------------------------------------------------------------------------------------------------------------|
-| `data-src` | **Required** | Full path to image eg: `/assets/images/filename.jpg`. Use absolute URLS for those hosted externally.                                                    |
-| `src`      | Optional     | Full path to low-quality image eg: `/assets/images/filename.jpg`. Use absolute URLS for those hosted externally. Defaults to inline transparent `.gif`. |
-| `alt`      | Optional     | Image alternate text.                                                                                                                                   |
+To install:
 
-**Example:**
+1. Create/replace the contents of your `Gemfile` with the following:
 
-```liquid
-{% lazyload data-src="/assets/images/my-image.jpg" src="/assets/images/my-image-low-quality.jpg" alt="my lazyloaded image" %}
-```
+   ```ruby
+   source "https://rubygems.org"
 
-#### Responsive video embed
+   gem "github-pages", group: :jekyll_plugins
+   ```
 
-Embed a video from YouTube or Vimeo that responsively sizes to fit the width of 
-its parent using [`/_plugins/video_embed.rb`](src/_plugins.video_embed.rb).
+2. Add `jekyll-include-cache` to the `plugins` array of your `_config.yml`.
 
-##### YouTube
+3. Fetch and update bundled gems by running the following [Bundler](http://bundler.io/) command:
 
-To embed the following YouTube video at url `https://www.youtube.com/watch?v=XsxDH4HcOWA` 
-(long version) or `https://youtu.be/XsxDH4HcOWA` (short version) into a post or 
-page's main content you'd use: 
+   ```bash
+   bundle
+   ```
 
-```liquid
-{% youtube XsxDH4HcOWA %}
-```
+4. Add `remote_theme: "mmistakes/minimal-mistakes@4.17.1"` to your `_config.yml` file. Remove any other `theme:` or `remote_theme:` entry.
 
-##### Vimeo
-
-To embed the following Vimeo video at url `https://vimeo.com/97649261` into a 
-post or page's main content you'd use: 
-
-```liquid
-{% vimeo 97649261 %}
-```
-
-### Local development
-
-Let Jekyll do what it does best and transform your content into HTML. Asset 
-management is handled by Gulp:
-
-- build `style.css` (preprocess SCSS, add vendor prefixes, concatenate, minify, 
-  hash, and gzip)
-- build critical path CSS
-- build `index.js` (concatenate, minify, hash, and gzip)
-- optimize images
-- optimize and resize `feature` images
-- optimize and combine SVG icon set
-- serve site locally for testing with Browser Sync
-- deploy site to production server via Rsync
-- submit XML sitemap to Google & Bing
-
-Default structure (paths can be modified in `gulpfile.js` and `_config.yml`):
-
-```bash
-├── gulp                      # => gulp tasks
-├── src                       # => source Jekyll files and assets
-|  ├── _includes
-|  ├── _layouts
-|  ├── _plugins
-|  ├── ...
-|  ├── _posts
-|  ├── assets
-|  |  ├── icons
-|  |  ├── images
-|  |  |   └── feature
-|  |  ├── javascript
-|  |  |   ├── plugins
-|  |  |   ├── vendor
-|  |  |   └── main.js
-|  |  ├── stylesheets
-|  |  |   ├── vendor
-|  |  |   ├── ...
-|  |  |   └── style.scss
-├── .editorconfig
-├── .gitignore
-├── _config.dev.yml
-├── _config.yml
-├── Gemfile
-├── gulpfile.js
-├── package.json
-├── rsync-credentials.json
-├── ...
-```
-
-## Getting started
-
-### Dependencies:
-
-- **Ruby**: >2.1 with Bundler >1.10
-- **Node**: >4.2 and Yo >1.7.0
-- **Yarn**
-- **Gulp**: Since the release candidate is running Gulp 4.0 you need to install 
-  `gulp-cli`: `npm install gulp-cli -g`
-
-**Step 1:** Install [Bundler](http://bundler.io/), then run `bundle install`.
-
-**Step 2.** Install [Node.js](https://nodejs.org/en/) and [Yarn](https://yarnpkg.com/en/docs/install),
-then run `yarn install`.
-
-**Step 3:** Install [node-gyp](https://github.com/nodejs/node-gyp#installation).
-
-**Step 4.** To start run `gulp`. A development version of the site should be 
-generated and opened in a browser with Browser Sync at `http://localhost:4000`.
+**Looking for an example?** Fork the [Minimal Mistakes remote theme starter](https://github.com/mmistakes/mm-github-pages-starter) for the quickest method of getting a GitHub Pages hosted site up and running. Replace sample content with your own and configure as needed.
 
 ## Usage
 
-### `gulp [--prod]`
-
-This is the default command, and probably the one you'll use the most. This
-command will build your assets and site with development settings. You'll get
-sourcemaps, your drafts will be generated. As you are changing your posts, pages 
-and assets they will automatically update and inject into your browser via 
-[BrowserSync][browsersync].
-
-> `--prod`
-
-Once you are done and want to verify that everything works with production
-settings you add the flag `--prod` and your assets will be optimized. Your CSS,
-JS and HTML will be minified and gzipped, plus the CSS and JS will be cache
-busted. The images will be compressed and Jekyll will generate a site with all
-your posts and no drafts.
-
-### `gulp build [--prod]`
-
-This command is identical to the normal `gulp [--prod]` however it will not
-create a BrowserSync session in your browser.
-
-### `gulp (build) [--prod]` main subtasks
-
-> `gulp jekyll [--prod]`
-
-Without production settings Jekyll will only create both future posts and drafts. 
-With `--prod` none of that is true and it will generate all your posts.
-
-> `gulp styles|scripts [--prod]`
-
-Both your CSS and JS will have sourcemaps generated for them under development
-settings. Once you generate them with production settings sourcemap generation
-is disabled. Both will be minified, gzipped and cache busted with production
-settings.
-
-> `gulp images:optimize`
-
-Optimizes standard images and copies to `/dist` folder.
-
-> `gulp images:feature`
-
-Similar to the previous task but for images in `src/assets/images/feature`. 
-Resizes each image into various sizes to be served responsively with `<img>` 
-`srcset` or `<picture>` elements, optimizes, and then copies to `/dist` folder.
-
-> `gulp html --prod`
-
-**Does nothing without `--prod`.** Minifies and gzips your HTML files.
-
-> `gulp serve`
-
-If you just want to watch your site you can run this command. If wanted you can
-also edit the `serve` task to allow it to tunnel via [localtunnel][localtunnel]
-so people outside your local network can view it as well:
-
-```js
-  // tunnel: true,
-```
-
-You can also change the behavior for how it opens the URL when you run `gulp
-[--prod]`, you can see the options [here][browsersync-open]:
-
-```js
-  // open: false,
-```
-
-### `gulp icons`
-
-SVG assets are optimized and smashed together into `assets/icons/icons.svg` and can 
-be referenced by name. To update or add new assets place appropriately named 
-`.svg` files into the `src/assets/icons` folder.
-
-### `gulp deploy`
-
-When you're done developing and have built your site with either `gulp --prod`
-or `gulp build --prod` you can deploy your site with Rsync.
-
-If you need any help with configuring it, checkout the [`gulp-rsync`][rsync] repo.
-
-> `gulp submit:sitemap`
-
-Submit sitemap XML file to Google and Bing.
-
-### `gulp check`
-
-Builds site with production settings then tests HTML for broken links with 
-[html-proofer][htmlproofer].
-
-### `gulp clean`
-
-Deletes your assets from their `.tmp` directory as well as in `dist` and deletes
-any gzipped files. **NOTE:** Does not delete your images from `.tmp` to reduce
-the time to build your site due to image optimizations.
-
-### `gulp rebuild`
-
-Only use this if you want to regenerate everything, this will delete everything 
-(images, assets, your generated Jekyll site). You really shouldn't need to do
-this unless you have phantom image assets floating around you want to clear.
-
-### `gulp critical`
-
-Extract critical path CSS from `home`, `archive`, `post`, and `page` layouts 
-to inline via Jekyll `_includes`.
-
-**Note:** Clear `critical-<layout>.css` includes, run `gulp build`, then `gulp critical`.
-
-## Subtasks
-
-All of the subtasks lives in their own files in the `gulp` directory and are
-named after what they do. You can edit or look at any of them to see how they
-actually work. They're all commented.
-
-## Inject more than one JavaScript file
-
-If you want to split up your JavaScript files into say a `index.js` and a
-`vendor.js` file with files from [Bower][https://bower.io/] you can do this 
-quite easily. Create a copy of the `scripts` gulp task and rename it to 
-`scripts:vendor` and change the
-`gulp.src` files you need:
-
-```js
-gulp.src([
-  'bower_components/somelibrary.js/dist/somelibrary.js',
-  'bower_components/otherthing.js/dist/otherthing.js'
-])
-```
-
-and then change `.pipe(concat('index.js'))` into
-`.pipe(concat('vendor.js'))`. Then you go to the bottom of the gulpfile and
-change the `assets` task:
-
-```js
-gulp.task('assets', gulp.series(
-  gulp.series('clean:assets'),
-  gulp.parallel('styles', 'scripts:vendor', 'scripts', 'fonts', 'images')
-));
-```
-
-Notice the `scripts:vendor` task that has been added. Also be aware that things
-are injected in alphabetical order, so if you need your vendor scripts before
-the `index.js` file you have to either rename the `index.js` file or rename the
-`vendor.js` file. When you now run `gulp` or `gulp build` it will create a
-`vendor.js` file and automatically inject it at the bottom of your HTML. When
-running with `--prod` it'll automatically optimize as well.
-
-For more advanced uses, refer to the [`gulp-inject`][inject] documentation on
-how to create individual inject tags and inject specific files into them.
-
-**Gulp tasks inspired by [generator-jekyllized](https://github.com/sondr3/generator-jekyllized) by [Sondre Nilsen](https://github.com/sondr3).**
-
-[browsersync]: https://github.com/shakyShane/browser-sync
-[browsersync-open]: https://browsersync.io/docs/options/#option-open
-[gulp]: http://gulpjs.com/
-[inject]: https://github.com/klei/gulp-inject
-[jekyll-url]: http://jekyllrb.com/docs/github-pages/#project-page-url-structure
-[jekyll]: https://jekyllrb.com
-[localtunnel]: http://localtunnel.me/
-[rsync]: https://github.com/jerrysu/gulp-rsync
-[htmlproofer]: https://github.com/gjtorikian/html-proofer
+For detailed instructions on how to configure, customize, add/migrate content, and more read the [theme's documentation](https://mmistakes.github.io/minimal-mistakes/docs/quick-start-guide/).
 
 ---
 
-### Posts and Pages
+## Contributing
 
-Comments are disabled by default. To enable add `comments: true` to the YAML 
-Front Matter. Preferred method is to enable via YAML Front Matter defaults in `_config.yml`.
+Having trouble working with the theme? Found a typo in the documentation? Interested in adding a feature or [fixing a bug](https://github.com/mmistakes/minimal-mistakes/issues)? Then by all means [submit an issue](https://github.com/mmistakes/minimal-mistakes/issues/new) or [pull request](https://help.github.com/articles/using-pull-requests/). If this is your first pull request, it may be helpful to read up on the [GitHub Flow](https://guides.github.com/introduction/flow/) first.
+
+Minimal Mistakes has been designed as a base for you to customize and fit your site's unique needs. Please keep this in mind when requesting features and/or submitting pull requests. If it's not something that most people will use, I probably won't consider it. When in doubt ask. 
+
+This goes for author sidebar links and "share button" additions -- I have no intention of merging in every possibly option, the essentials are there to get you started :smile:.
+
+### Pull Requests
+
+When submitting a pull request:
+
+1. Clone the repo.
+2. Create a branch off of `master` and give it a meaningful name (e.g. `my-awesome-new-feature`).
+3. Open a pull request on GitHub and describe the feature or fix.
+
+Theme documentation and demo pages can be found in the [`/docs`](docs) if submitting improvements, typo corrections, etc.
+
+## Development
+
+To set up your environment to develop this theme, run `bundle install`.
+
+To test the theme, run `bundle exec rake preview` and open your browser at `http://localhost:4000/test/`. This starts a Jekyll server using content in the `test/` directory. As modifications are made to the theme and test site, it will regenerate and you should see the changes in the browser after a refresh.
+
+---
+
+## Credits
+
+### Creator
+
+**Michael Rose**
+
+- <https://mademistakes.com>
+- <https://twitter.com/mmistakes>
+- <https://github.com/mmistakes>
+
+### Icons + Demo Images:
+
+- [The Noun Project](https://thenounproject.com) -- Garrett Knoll, Arthur Shlain, and [tracy tam](https://thenounproject.com/tracytam)
+- [Font Awesome](http://fontawesome.io/)
+- [Unsplash](https://unsplash.com/)
+
+### Other:
+
+- [Jekyll](http://jekyllrb.com/)
+- [jQuery](http://jquery.com/)
+- [Susy](http://susy.oddbird.net/)
+- [Breakpoint](http://breakpoint-sass.com/)
+- [Magnific Popup](http://dimsemenov.com/plugins/magnific-popup/)
+- [FitVids.JS](http://fitvidsjs.com/)
+- [GreedyNav.js](https://github.com/lukejacksonn/GreedyNav)
+- [Smooth Scroll](https://github.com/cferdinandi/smooth-scroll)
+- [Gumshoe](https://github.com/cferdinandi/gumshoe)
+- [jQuery throttle / debounce](http://benalman.com/projects/jquery-throttle-debounce-plugin/)
+- [Lunr](http://lunrjs.com)
+
+---
 
 ## License
 
 The MIT License (MIT)
 
-Copyright (c) 2004-2019 Michael Rose
+Copyright (c) 2013-2019 Michael Rose and contributors
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
@@ -429,31 +218,56 @@ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 
-Made Mistakes incorporates icons from [The Noun Project](https://thenounproject.com/).
+Minimal Mistakes incorporates icons from [The Noun Project](https://thenounproject.com/) 
+creators Garrett Knoll, Arthur Shlain, and tracy tam.
 Icons are distributed under Creative Commons Attribution 3.0 United States (CC BY 3.0 US).
-Home by Mahmure Alp from the Noun Project
 
-Made Mistakes incorporates photographs from [Unsplash](https://unsplash.com).
+Minimal Mistakes incorporates [Font Awesome](http://fontawesome.io/),
+Copyright (c) 2017 Dave Gandy.
+Font Awesome is distributed under the terms of the [SIL OFL 1.1](http://scripts.sil.org/OFL) 
+and [MIT License](http://opensource.org/licenses/MIT).
 
-Made Mistakes incorporates [Breakpoint](http://breakpoint-sass.com/).
+Minimal Mistakes incorporates photographs from [Unsplash](https://unsplash.com).
+
+Minimal Mistakes incorporates [Susy](http://susy.oddbird.net/),
+Copyright (c) 2017, Miriam Eric Suzanne.
+Susy is distributed under the terms of the [BSD 3-clause "New" or "Revised" License](https://opensource.org/licenses/BSD-3-Clause).
+
+Minimal Mistakes incorporates [Breakpoint](http://breakpoint-sass.com/).
 Breakpoint is distributed under the terms of the [MIT/GPL Licenses](http://opensource.org/licenses/MIT).
 
-Made Mistakes incorporates [Bigfoot](http://bigfootjs.com/),
-Copyright (c) 2013-2014, Chris Sauve.
-Bigfoot is distributed under the terms of the MIT License](http://opensource.org/licenses/MIT).
+Minimal Mistakes incorporates [FitVids.js](https://github.com/davatron5000/FitVids.js/),
+Copyright (c) 2013 Dave Rubert and Chris Coyier.
+FitVids is distributed under the terms of the [WTFPL License](http://sam.zoy.org/wtfpl/).
 
-Made Mistakes incorporates [Lity](http://sorgalla.com/lity/),
-Copyright (c) 2015-2016, Jan Sorgalla.
-Lity is distributed under the terms of the MIT License](http://opensource.org/licenses/MIT).
+Minimal Mistakes incorporates [Magnific Popup](http://dimsemenov.com/plugins/magnific-popup/),
+Copyright (c) 2014-2016 Dmitry Semenov, http://dimsemenov.com.
+Magnific Popup is distributed under the terms of the MIT License.
 
-Made Mistakes incorporates [Smooth Scroll](https://github.com/cferdinandi/smooth-scroll),
-Copyright (c) 2019, Chris Ferdinandi.
+Minimal Mistakes incorporates [Smooth Scroll](http://github.com/cferdinandi/smooth-scroll),
+Copyright (c) 2019 Chris Ferdinandi.
 Smooth Scroll is distributed under the terms of the [MIT License](http://opensource.org/licenses/MIT).
 
-Made Mistakes incorporates [Lazysizes](https://github.com/aFarkas/lazysizes),
-Copyright (c) 2015, Alexander Farkas.
-Lazysizes is distributed under the terms of the [MIT License](http://opensource.org/licenses/MIT).
+Minimal Mistakes incorporates [Gumshoejs](http://github.com/cferdinandi/gumshoe),
+Copyright (c) 2019 Chris Ferdinandi.
+Smooth Scroll is distributed under the terms of the [MIT License](http://opensource.org/licenses/MIT).
 
-Made Mistakes incorporates [SVG for Everybody](https://jonathantneal.github.io/svg4everybody/),
-Copyright (c) Jonathan Neal.
-SVG for Everybody is distributed under the terms of the [CC0 1.0 Universal License](https://creativecommons.org/publicdomain/zero/1.0/).
+Minimal Mistakes incorporates [jQuery throttle / debounce](http://benalman.com/projects/jquery-throttle-debounce-plugin/),
+Copyright (c) 2010 "Cowboy" Ben Alman.
+jQuery throttle / debounce is distributed under the terms of the [MIT License](http://opensource.org/licenses/MIT).
+
+Minimal Mistakes incorporates [GreedyNav.js](https://github.com/lukejacksonn/GreedyNav),
+Copyright (c) 2015 Luke Jackson.
+GreedyNav.js is distributed under the terms of the [MIT License](http://opensource.org/licenses/MIT).
+
+Minimal Mistakes incorporates [Jekyll Group-By-Array](https://github.com/mushishi78/jekyll-group-by-array),
+Copyright (c) 2015 Max White <mushishi78@gmail.com>.
+Jekyll Group-By-Array is distributed under the terms of the [MIT License](http://opensource.org/licenses/MIT).
+
+Minimal Mistakes incorporates [@allejo's Pure Liquid Jekyll Table of Contents](https://allejo.io/blog/a-jekyll-toc-in-liquid-only/),
+Copyright (c) 2017 Vladimir Jimenez.
+Pure Liquid Jekyll Table of Contents is distributed under the terms of the [MIT License](http://opensource.org/licenses/MIT).
+
+Minimal Mistakes incorporates [Lunr](http://lunrjs.com),
+Copyright (c) 2018 Oliver Nightingale.
+Lunr is distributed under the terms of the [MIT License](http://opensource.org/licenses/MIT).
